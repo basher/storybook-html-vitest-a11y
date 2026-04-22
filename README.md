@@ -1,5 +1,6 @@
 # Storybook/HTML example to demonstrate issues with Vitest accessibility testing
-See [official Storybook Vitest docs](https://storybook.js.org/docs/writing-tests/accessibility-testing).
+- See [official Storybook Vitest docs](https://storybook.js.org/docs/writing-tests/accessibility-testing).
+- See [Github issue](https://github.com/storybookjs/storybook/issues/34613).
 
 ## Run accessibility tests
 ### 1. Using `a11y` addon in Storybook UI
