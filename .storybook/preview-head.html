@@ -76,16 +76,9 @@ button {
 
 [data-button-style='secondary'] {
     color: var(--webui-color-primary-500);
-    color: light-dark(
-        var(--webui-color-primary-500),
-        var(--webui-color-neutral-100)
-    );
 
     &[data-button*='text'] {
-        border-color: light-dark(
-            var(--webui-color-primary-500),
-            var(--webui-color-primary-100)
-        );
+        border-color: var(--webui-color-primary-500);
     }
 }
 </style>
