@@ -20,6 +20,15 @@ export default {
                 defaultValue: { summary: 'N/A' }
             },
         },
+        buttonSize: {
+            control: 'select',
+            options: ['small'],
+            description: 'Button size.',
+            table: {
+                type: { summary: 'select' },
+                defaultValue: { summary: 'N/A' }
+            },
+        },
     },
 };
 

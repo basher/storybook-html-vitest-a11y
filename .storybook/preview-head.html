@@ -17,6 +17,12 @@
 
     --webui-focus-shadow: 0 0 0 0.25rem var(--webui-color-focus-500);
     --webui-focus-outline: 0.25rem solid transparent;
+
+    --webui-font-size-body: clamp(1rem, 0.875rem + 0.4167vw, 1.25rem);
+    --webui-font-size-s: clamp(0.8rem, 0.7311rem + 0.2296vw, 0.9377rem);
+
+    --webui-gutter-xs: clamp(0.5rem, 0.2813rem + 0.7292vw, 0.9375rem);
+    --webui-gutter-s: clamp(0.75rem, 0.5rem + 0.8333vw, 1.25rem);
 }
 
 :where(*, *::after, *::before) {
@@ -34,6 +40,7 @@
 body {
     color: var(--webui-color-neutral-900);
     font-family: system-ui, sans-serif;
+    font-size: var(--webui-font-size-body);
     line-height: 1.5;
 }
 
@@ -57,7 +64,7 @@ button {
 .button {
     color: inherit;
     display: inline-block;
-    padding: 0.5rem;
+    padding: var(--webui-gutter-s);
     text-decoration: none;
 }
 
@@ -80,5 +87,10 @@ button {
     &[data-button*='text'] {
         border-color: var(--webui-color-primary-500);
     }
+}
+
+[data-button-size='small'] {
+    font-size: var(--webui-font-size-s);
+    padding: var(--webui-gutter-xs);
 }
 </style>
