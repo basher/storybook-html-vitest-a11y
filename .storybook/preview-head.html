@@ -1,96 +1,12 @@
-<!-- Add some CSS from https://github.com/basher/Web-UI-Boilerplate/tree/master/ui/src/css -->
-<style>
-:root {
-    --color-brand: oklch(44.03% 0.1603 303.37); /* rebeccapurple */
-    --color-neutral: oklch(59.82% 0 0);
-    --color-accent-blue: oklch(71.69% 0.1603 226.5552);
+<!-- Load CSS. -->
+<script>
+    const link = document.createElement('link');
 
-    --webui-color-primary-500: var(--color-brand);
-    --webui-color-primary-100: oklch(from var(--color-brand) calc(l + 0.3) c h);
-    --webui-color-neutral-900: oklch(
-        from var(--color-neutral) calc(l - 0.45) c h
-    );
-    --webui-color-neutral-100: oklch(
-        from var(--color-neutral) calc(l + 0.38) c h
-    );
-    --webui-color-focus-500: var(--color-accent-blue);
+    const cssPath = window.location.hostname === 'localhost'
+        ? 'index.css'
+        : 'path/to/build/folder/index.css';
 
-    --webui-focus-shadow: 0 0 0 0.25rem var(--webui-color-focus-500);
-    --webui-focus-outline: 0.25rem solid transparent;
-
-    --webui-font-size-body: clamp(1rem, 0.875rem + 0.4167vw, 1.25rem);
-    --webui-font-size-s: clamp(0.8rem, 0.7311rem + 0.2296vw, 0.9377rem);
-
-    --webui-gutter-xs: clamp(0.5rem, 0.2813rem + 0.7292vw, 0.9375rem);
-    --webui-gutter-s: clamp(0.75rem, 0.5rem + 0.8333vw, 1.25rem);
-}
-
-:where(*, *::after, *::before) {
-    box-sizing: border-box;
-}
-
-* {
-    background: transparent;
-    border: 0;
-    margin: 0;
-    padding: 0;
-    vertical-align: baseline;
-}
-
-body {
-    color: var(--webui-color-neutral-900);
-    font-family: system-ui, sans-serif;
-    font-size: var(--webui-font-size-body);
-    line-height: 1.5;
-}
-
-button {
-    appearance: none;
-    cursor: pointer;
-    font: inherit;
-    line-height: 1;
-    -webkit-tap-highlight-color: oklch(0% 0 0 / 0%);
-
-    &:focus-visible {
-        box-shadow: var(--webui-focus-shadow);
-        outline: var(--webui-focus-outline);
-    }
-
-    &:focus:not(:focus-visible) {
-        outline: var(--webui-focus-outline);
-    }
-}
-
-.button {
-    color: inherit;
-    display: inline-block;
-    padding: var(--webui-gutter-s);
-    text-decoration: none;
-}
-
-[data-button*='text'] {
-    border: 0.125rem solid;
-}
-
-[data-button-style='primary'] {
-    background-color: var(--webui-color-primary-500);
-    color: var(--webui-color-neutral-100);
-
-    &[data-button*='text'] {
-        border-color: var(--webui-color-primary-500);
-    }
-}
-
-[data-button-style='secondary'] {
-    color: var(--webui-color-primary-500);
-
-    &[data-button*='text'] {
-        border-color: var(--webui-color-primary-500);
-    }
-}
-
-[data-button-size='small'] {
-    font-size: var(--webui-font-size-s);
-    padding: var(--webui-gutter-xs);
-}
-</style>
+    link.rel = 'stylesheet';
+    link.href = cssPath;
+    document.head.appendChild(link);
+</script>

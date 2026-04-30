@@ -13,5 +13,16 @@ const config = {
         name: '@storybook/html-vite',
         options: {},
     },
+
+    // Load CSS using environment variables.
+    // Commented out for now, as it causes issues with Storybook's CSS loading when running Vitest.
+    /*previewHead: (head) => `
+        ${head}
+        ${
+            `
+            <link href="${process.env.STORYBOOK_CSS_PATH}" rel="stylesheet" />
+            `
+        }
+    `,*/
 };
 export default config;
