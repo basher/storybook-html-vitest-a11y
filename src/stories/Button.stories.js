@@ -35,6 +35,8 @@ export default {
 export const Button = {
     args: {
         label: 'Button',
+        buttonStyle: 'primary',
+        buttonSize: 'small',
     },
     render: (args) => ButtonHtml(args),
 };
